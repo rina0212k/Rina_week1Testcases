@@ -12,16 +12,18 @@ import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
 import com.training.pom.LoginPOM;
-import com.training.pom.TC1POM;
+import com.training.pom.RTTC_003POM;
+import com.training.pom.RTTC_003POM;
+//import com.training.pom.RTTC_003;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class RTTC_001 {
+public class RTTC_003 {
 
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;
-	private TC1POM test1 ;
+	private RTTC_003POM test1 ;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -48,25 +50,26 @@ public class RTTC_001 {
 		driver.quit();
 	}
 	@Test
-	public void validRTTC_01Test() {
-		 test1 =new TC1POM(driver);
+	public void validRTTC_03Test() throws InterruptedException {
+	System.out.println("test is called");
+		test1 =new RTTC_003POM(driver);
 		 test1.clickprofile();
-		test1.clickaccount();
+		 System.out.println("profile is clicked");
+		//test1.clickaccount();
+		System.out.println("login link is clicked");
+		Thread.sleep(5000);
+		test1.sendemailaddr("manzoor@gmail.com");
+		test1.sendpassword("manzoor1");
 		
-		test1.clickregister();
-		test1.sendFirstname("rina");
+		Thread.sleep(2000);
+				
+		test1.clickloginBtn();
+		test1.clickforgottenpassword();
+		 System.out.println("forgotten is clicked");
+		 test1.sendemail("mazoor@gmail.com");
+		 test1.clickcontinuebtn();
+	  
 		
-	    test1.sendLastname("test");
-		test1.sendEmail("rinacg2@gmail.com"); 
-		test1.sendTelephone("234567876"); 
-		test1.sendAddress1("ibmpune"); 
-		test1.sendcity("pune"); 
-		test1.sendregion("Maharashtra");
-		test1.sendpassword("welcome1");
-		test1.sendconfirmpassword("welcome1");
-		test1.clickprivacypolicy(); 
-		test1.clickcontinuebtn();
-		
-		screenShot.captureScreenShot("First");
+		//screenShot.captureScreenShot("First");
 	}
 }

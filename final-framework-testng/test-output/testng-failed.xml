@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.RTTC_001">
+      <class name="com.training.sanity.tests.RTTC_004">
         <methods>
           <include name="tearDown"/>
+          <include name="validRTTC_004Test"/>
           <include name="setUpBeforeClass"/>
-          <include name="validRTTC_01"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.RTTC_001 -->
+      </class> <!-- com.training.sanity.tests.RTTC_004 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
