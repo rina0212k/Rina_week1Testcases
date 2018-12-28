@@ -20,11 +20,9 @@ public class TC1POM {
 		@FindBy(xpath="//*[@id=\"Menu_Wmt3OMY3\"]/nav/ul/li[2]/ul/li[2]/a/span")
 		private WebElement account; 
 		
-		//@FindBy(xpath= "//*[@id=\"System_nyHsmShk\"]/div/div[1]/div/div[2]/div/a")
-		//private WebElement register;
-		
-		@FindBy(xpath = "//*[@id=\"System_nyHsmShk\"]/div/div[1]/div/a")
+		@FindBy(xpath= "//*[@id=\"System_nyHsmShk\"]/div/div[1]/div/div[2]/div/a")
 		private WebElement register;
+		 
 		
 		@FindBy(xpath="//*[@id=\"input-firstname\"]")
 		private WebElement Firstname; 
@@ -102,7 +100,7 @@ public class TC1POM {
 		}
 		
 		public void sendregion(String region) {
-			this.region.clear(); 
+			//this.region.clear(); 
 			this.region.sendKeys(region); 
 		}
 		
