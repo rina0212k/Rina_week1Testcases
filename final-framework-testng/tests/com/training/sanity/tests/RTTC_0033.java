@@ -84,14 +84,17 @@ public class RTTC_0033 {
 		}
 		
 		System.out.println(driver.getTitle());
+		Thread.sleep(9000);
 		
 		test1.clickaddtocart();
 		System.out.println("addtocart is clicked");
 		
+		Thread.sleep(5000);
+		
 		test1.clickclosepop();
 		System.out.println("popclose is clicked");
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 				
 		//Actions action = new Actions(driver);
 		test1.movetoElementcarticon();
@@ -110,29 +113,45 @@ public class RTTC_0033 {
 		test1.clickcontinuebuttonforbilling();
 		System.out.println("continuebuttonforbilling is clicked");
 		
-		//test1.clickcontinuebuttonfordelivery();
-		//System.out.println("continuebuttonfordelivery is clicked");
+		Thread.sleep(8000);
+		
+		test1.clickshippingaddressbutton();
+		System.out.println("shipping address is clicked");
+		Thread.sleep(8000);
 		
 		test1.sendaddcomment("product is good");
 		System.out.println("comment is added");
-		
+		Thread.sleep(5000);
+		test1.clickcontinuebuttonforshipping();
+		System.out.println("continuebuttonforshipping is clicked");
+		Thread.sleep(5000);
 		test1.clickagreecheckbox();
 		System.out.println("agreecheckbox is clicked");
+		Thread.sleep(5000);
+		//test1.clickcontinuebuttonfordelivery();
+		//System.out.println("continuebuttonfordelivery is clicked");
 		
 		test1.clickcontinuebuttonforpaymentmethod();
 		System.out.println("continuebuttonforpaymentmethod is clicked");
+		Thread.sleep(5000);
+		//test1.sendaddcomment("product is good");
+		//System.out.println("comment is added");
+		test1.clickconfirmbutton();
+		System.out.println("confirmbutton is clicked");
+		Thread.sleep(5000);
 		
-		test1.clickcontinuebuttonforshipping();
-		System.out.println("continuebuttonforshipping is clicked");
+		//screenShot.captureScreenShot("First");
+	}
+}
+
+		
+		
+		
+		
+		
 		
 	
 		
 		
 		
-		test1.clickconfirmbutton();
-		System.out.println("confirmbutton is clicked");
-	  
 		
-		//screenShot.captureScreenShot("First");
-	}
-}

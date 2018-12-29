@@ -37,7 +37,7 @@ public class RTTC_033POM {
 		@FindBy(xpath="//*[@id=\"menu_category_Menu_VIfWm2LT_444\"]/a/span/span")
 		private WebElement ethnic; 
 		
-		@FindBy(xpath="//*[@id=\"ProductsSystem_QQI8r357\"]/div[1]/div[2]/div/div[3]/div/div/div[1]/h4/a")
+		@FindBy(xpath="//*[@id=\"ProductsSystem_QQI8r357\"]/div[1]/div[1]/div/div[3]/div/div/div[1]/h4/a")
 		private WebElement product; 
 		
 		@FindBy(xpath="//*[@id=\"button-cart\"]")
@@ -61,8 +61,11 @@ public class RTTC_033POM {
 		@FindBy(id="button-shipping-address")
 		private WebElement continuebuttonfordelivery;
 		
-		@FindBy(xpath="//*[@id=\"collapse-payment-method\"]/div/p[2]/textarea")
+		@FindBy(xpath="//*[@id=\"collapse-shipping-method\"]/div/p[4]/textarea")
 		private WebElement addcomment;
+		
+		@FindBy(xpath="//*[@id=\"button-shipping-address\"]")
+		private WebElement shippingaddressbutton;
 		
 		
 		@FindBy(xpath="//*[@id=\"button-shipping-method\"]")
@@ -168,5 +171,9 @@ public class RTTC_033POM {
 		
 		public void clickconfirmbutton() {
 			this.confirmbutton.click(); 
+		}
+		
+		public void clickshippingaddressbutton() {
+			this.shippingaddressbutton.click(); 
 		}
 }
