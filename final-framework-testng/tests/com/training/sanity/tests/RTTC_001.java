@@ -67,6 +67,6 @@ public class RTTC_001 {
 		test1.clickprivacypolicy(); 
 		test1.clickcontinuebtn();
 		
-		screenShot.captureScreenShot("First");
+		//screenShot.captureScreenShot("First");
 	}
 }
