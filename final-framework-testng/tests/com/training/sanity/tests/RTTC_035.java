@@ -103,10 +103,12 @@ public class RTTC_035 {
 		test1.senddiscounttabpricetext("50");
 		System.out.println("discount proce entered");
 		Thread.sleep(3000);
-		test1.clickstartdate();
+		//test1.clickstartdate();
+		test1.startdate();
 		System.out.println("startdate is clicked");
 		Thread.sleep(3000);
-		test1.clickenddate();
+		test1.enddate();
+		//test1.clickenddate();
 		System.out.println("end datet is entered");
 		Thread.sleep(3000);
 		test1.clickrewardpointtab();

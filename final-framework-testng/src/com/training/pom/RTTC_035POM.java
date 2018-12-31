@@ -1,5 +1,9 @@
 package com.training.pom;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -150,12 +154,14 @@ public class RTTC_035POM {
 			this.discounttabpricetext.clear(); 
 			this.discounttabpricetext.sendKeys(discounttabpricetext); 
 		}
-		public void clickstartdate() {
+		/*public void clickstartdate() {
 			this.startdate.click();
 		}
 		public void clickenddate() {
 			this.enddate.click();
-		}
+		}*/
+		
+		
 		public void clickrewardpointtab() {
 			this.rewardpointtab.click();
 		}
@@ -170,11 +176,27 @@ public class RTTC_035POM {
 		public void clickloginBtn() {
 			this.loginBtn.click();
 		}
+		public void startdate() {
+			//to get todays date using Calendar utility and enter as start date 
+			Calendar calendar = Calendar.getInstance();
+			Date today= calendar.getTime();
+			SimpleDateFormat smf = new SimpleDateFormat("yyyy-M-d");
+			String currentDate = smf.format(today);
+			// selecting todays date in calendar
+			this.startdate.sendKeys(currentDate);
+			
+		}
 		
-		
-		
-		
-		
+		public void enddate() {
+			//Get next date and enter as end date 
+			Calendar calendar = Calendar.getInstance();
+			//getting current date +1 using calendar utility
+			calendar.add(Calendar.DAY_OF_YEAR,1);
+			Date tomorrow= calendar.getTime();
+			SimpleDateFormat smf = new SimpleDateFormat("yyyy-M-d");
+			String nextDate = smf.format(tomorrow);
+			this.enddate.sendKeys(nextDate);
+		}
 		
 		
 		
