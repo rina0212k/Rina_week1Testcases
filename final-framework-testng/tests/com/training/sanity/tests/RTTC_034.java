@@ -52,29 +52,29 @@ public class RTTC_034 {
 	public void validRTTC_034Test() throws InterruptedException {
 	System.out.println("test is called");
 		test1 =new RTTC_034POM(driver);
+		test1.movetoElementshopnowlink();
+		Thread.sleep(3000);
 		 test1.clickethnic();
+		 
 		 System.out.println("ethnic is clicked");
-		/*test1.clickmassa();
-		System.out.println("massa is clicked");
-		Thread.sleep(5000);*/
+		 test1.clickproduct();
+			System.out.println("product is clicked");
+			Thread.sleep(5000);
 		
-		String ParentWindowhandle=driver.getWindowHandle();
-		System.out.println("ParentWindowhandle"+ParentWindowhandle);
-		
-		test1.clickproduct();
-		System.out.println("product is clicked");
-		Thread.sleep(5000);
-		
-		System.out.println(driver.getTitle());
-		{
-		for(String childtab:driver.getWindowHandles())
-			driver.switchTo().window(childtab);
-		}
-		
-		System.out.println(driver.getTitle());
-		Thread.sleep(9000);
-		test1.clickaddtocart();
-		System.out.println("addtocart is clicked");
+			String ParentWindowhandle=driver.getWindowHandle();
+			System.out.println("ParentWindowhandle"+ParentWindowhandle);
+			
+			System.out.println(driver.getTitle());
+			{
+			for(String childtab:driver.getWindowHandles())
+				driver.switchTo().window(childtab);
+			}
+			
+			System.out.println(driver.getTitle());
+			Thread.sleep(9000);
+			
+			test1.clickaddtocart();
+			System.out.println("addtocart is clicked");
 		Thread.sleep(5000);
 		test1.clickclosepop();
 		System.out.println("popclose is clicked");

@@ -34,10 +34,14 @@ public class RTTC_034POM {
 		@FindBy(xpath="//*[@id=\"System_nyHsmShk\"]/div[1]")
 		private WebElement errormsg; 
 		
-		@FindBy(xpath="//*[@id=\"menu_category_Menu_VIfWm2LT_444\"]/a/span/span")
-		private WebElement ethnic; 
+		@FindBy(xpath="//*[@id=\"menu_all_categories_Menu_VIfWm2LT_Sb0I5\"]/a/span")
+		private WebElement shopnowlink; 
 		
-		@FindBy(xpath="//*[@id=\"ProductsSystem_QQI8r357\"]/div[1]/div[1]/div/div[3]/div/div/div[1]/h4/a")
+		@FindBy(xpath="//*[@id=\"menu_all_categories_Menu_VIfWm2LT_Sb0I5\"]/ul/li[1]/a/span")
+		private WebElement ethnic; 
+		 
+		
+		@FindBy(xpath="//*[@id=\"ProductsSystem_QQI8r357\"]/div[1]/div[1]/div/div[2]/div[1]/a/span/span/img")
 		private WebElement product; 
 		
 		@FindBy(xpath="//*[@id=\"button-cart\"]")
@@ -141,7 +145,14 @@ public class RTTC_034POM {
 		public void verifyerrormsg() {
 			this.errormsg.getText();
 		}
-		
+		public void movetoElementshopnowlink() {
+			Actions action = new Actions(driver);
+			action.moveToElement(shopnowlink);
+			//this.movetoElementcarticon();
+			//action.click();
+			action.perform();
+			
+		}
 		public void clickethnic() {
 			this.ethnic.click(); 
 		}
