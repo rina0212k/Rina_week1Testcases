@@ -57,25 +57,30 @@ public class RTTC_0033 {
 		//test1.clickaccount();
 		System.out.println("login link is clicked");
 		Thread.sleep(5000);
-		test1.sendemailaddr("mazoor@gmail.com");
-		test1.sendpassword("manzoor1");
+		test1.sendemailaddr("rinacg2@gmail.com");
+		test1.sendpassword("welcome1");
 		
 		Thread.sleep(2000);
 				
 		test1.clickloginBtn();
 		Thread.sleep(3000);
+		test1.movetoElementshopnowlink();
+		Thread.sleep(3000);
 		 test1.clickethnic();
 		 System.out.println("ethnic is clicked");
 		/*test1.clickmassa();
-		System.out.println("massa is clicked");
-		Thread.sleep(5000);*/
+		System.out.println("massa is clicked");*/
+		Thread.sleep(5000);
 		
-		String ParentWindowhandle=driver.getWindowHandle();
-		System.out.println("ParentWindowhandle"+ParentWindowhandle);
+		//String ParentWindowhandle=driver.getWindowHandle();
+		//System.out.println("ParentWindowhandle"+ParentWindowhandle);
 		
 		test1.clickproduct();
 		System.out.println("product is clicked");
 		Thread.sleep(5000);
+		
+		String ParentWindowhandle=driver.getWindowHandle();
+		System.out.println("ParentWindowhandle"+ParentWindowhandle);
 		
 		System.out.println(driver.getTitle());
 		{
@@ -94,13 +99,13 @@ public class RTTC_0033 {
 		test1.clickclosepop();
 		System.out.println("popclose is clicked");
 		
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 				
 		//Actions action = new Actions(driver);
 		test1.movetoElementcarticon();
 		//action.perform();
 		
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		
 		test1.clickviewcart();
 		System.out.println("view cart is clicked");

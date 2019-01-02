@@ -125,7 +125,7 @@ test1.sendFirstname("rina");
 		Thread.sleep(5000);
 		test1.clickcontinuebuttonforpaymentmethod();
 		System.out.println("continuebuttonforpaymentmethod is clicked");
-		Thread.sleep(9000);
+		Thread.sleep(8000);
 		
 		test1.clickconfirmbutton();
 		System.out.println("confirmbutton is clicked");
