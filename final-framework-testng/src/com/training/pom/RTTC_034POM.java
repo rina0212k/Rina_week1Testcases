@@ -41,7 +41,7 @@ public class RTTC_034POM {
 		private WebElement ethnic; 
 		 
 		
-		@FindBy(xpath="//*[@id=\"ProductsSystem_QQI8r357\"]/div[1]/div[1]/div/div[2]/div[1]/a/span/span/img")
+		@FindBy(xpath="//*[@id=\"ProductsSystem_QQI8r357\"]/div[1]/div[2]/div/div[2]/div[1]/a/span/span/img")
 		private WebElement product; 
 		
 		@FindBy(xpath="//*[@id=\"button-cart\"]")

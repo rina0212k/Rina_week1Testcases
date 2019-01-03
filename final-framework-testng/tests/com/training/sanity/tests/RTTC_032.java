@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import com.training.generics.ScreenShot;
 import com.training.pom.LoginPOM;
 import com.training.pom.RTTC_032POM;
+import com.training.pom.RTTC_034POM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -49,33 +50,33 @@ public class RTTC_032 {
 		driver.quit();
 	}
 	@Test
-	public void validRTTC_032Test() throws InterruptedException {
+	public void validRTTC_034Test() throws InterruptedException {
 	System.out.println("test is called");
 		test1 =new RTTC_032POM(driver);
+		test1.movetoElementshopnowlink();
+		Thread.sleep(3000);
 		 test1.clickethnic();
+		 
 		 System.out.println("ethnic is clicked");
-		/*test1.clickmassa();
-		System.out.println("massa is clicked");
-		Thread.sleep(5000);*/
+		 test1.clickproduct();
+			System.out.println("product is clicked");
+			Thread.sleep(5000);
 		
-		String ParentWindowhandle=driver.getWindowHandle();
-		System.out.println("ParentWindowhandle"+ParentWindowhandle);
-		
-		test1.clickproduct();
-		System.out.println("product is clicked");
+			String ParentWindowhandle=driver.getWindowHandle();
+			System.out.println("ParentWindowhandle"+ParentWindowhandle);
+			
+			System.out.println(driver.getTitle());
+			{
+			for(String childtab:driver.getWindowHandles())
+				driver.switchTo().window(childtab);
+			}
+			
+			System.out.println(driver.getTitle());
+			Thread.sleep(9000);
+			
+			test1.clickaddtocart();
+			System.out.println("addtocart is clicked");
 		Thread.sleep(5000);
-		
-		System.out.println(driver.getTitle());
-		{
-		for(String childtab:driver.getWindowHandles())
-			driver.switchTo().window(childtab);
-		}
-		
-		System.out.println(driver.getTitle());
-		
-		test1.clickaddtocart();
-		System.out.println("addtocart is clicked");
-		
 		test1.clickclosepop();
 		System.out.println("popclose is clicked");
 		
@@ -92,7 +93,6 @@ public class RTTC_032 {
 		
 		test1.clickcheckout();
 		System.out.println("checkout is clicked");
-		
 		//screenShot.captureScreenShot("First");
 	}
 }

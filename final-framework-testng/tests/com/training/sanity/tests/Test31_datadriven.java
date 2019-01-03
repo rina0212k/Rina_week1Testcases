@@ -1,6 +1,7 @@
 package com.training.sanity.tests;
 
 import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -12,6 +13,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.training.dataproviders.LoginDataProviders;
 import com.training.generics.ScreenShot;
 import com.training.pom.LoginPOM;
 import com.training.pom.RTTC_031POM;
@@ -54,8 +56,8 @@ public class Test31_datadriven {
 		Thread.sleep(1000);
 		driver.quit();
 	}
-	@Test
-	public void validTest31_datadriven() throws InterruptedException {
+	//@Test
+	/*public void validTest31_datadriven() throws InterruptedException {
 	System.out.println("test is called");
 		test1 =new RTTC_031POM(driver);
 		 test1.clickprofile();
@@ -64,11 +66,19 @@ public class Test31_datadriven {
 		System.out.println("login link is clicked");
 		Thread.sleep(5000);
 		test1.sendemailaddr("invalid@gmail.com");
-		test1.sendpassword("manzoor1");
+		test1.sendpassword("manzoor1");*/
+	@Test(dataProvider = "excel-inputs", dataProviderClass = LoginDataProviders.class)
+	public void loginDBTest(String userName, String password) {
+		test1.clickprofile();
+		 System.out.println("profile is clicked");
+		test1.sendemailaddr("userName");
+		test1.sendpassword("password");
+		loginPOM.clickLoginBtn();
+	
 		
-		Thread.sleep(2000);
+		
 				
-		test1.clickloginBtn();
+		//test1.clickloginBtn();
 	
 		test1.verifyerrormsg();
 	}
