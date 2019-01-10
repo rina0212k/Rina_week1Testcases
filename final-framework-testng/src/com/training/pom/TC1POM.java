@@ -39,6 +39,15 @@ public class TC1POM {
 		@FindBy(xpath="//*[@id=\"input-address-1\"]")
 		private WebElement Address1;
 		
+		@FindBy(xpath="//*[@id=\"input-address-2\"]")
+		private WebElement Address2;
+		
+		@FindBy(xpath="//*[@id=\"input-postcode\"]")
+		private WebElement postcode;
+		
+		@FindBy(xpath="//*[@id=\"input-country\"]")
+		private WebElement country;
+		
 		@FindBy(xpath="//*[@id=\"input-city\"]")
 		private WebElement city;
 		
@@ -94,6 +103,18 @@ public class TC1POM {
 			this.Address1.sendKeys(Address1); 
 		}
 		
+		public void sendAddress2(String Address2) {
+			this.Address2.clear(); 
+			this.Address2.sendKeys(Address2); 
+		}
+		
+		
+		public void sendpostcode(String postcode) {
+			this.postcode.clear(); 
+			this.postcode.sendKeys(postcode); 
+		}
+		
+		
 		public void sendcity(String city) {
 			this.city.clear(); 
 			this.city.sendKeys(city); 
@@ -102,6 +123,11 @@ public class TC1POM {
 		public void sendregion(String region) {
 			//this.region.clear(); 
 			this.region.sendKeys(region); 
+		}
+		
+		public void sendcountry(String country) {
+			//this.region.clear(); 
+			this.country.sendKeys(country); 
 		}
 		
 		public void sendpassword(String password) {

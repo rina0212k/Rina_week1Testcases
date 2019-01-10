@@ -2,6 +2,7 @@ package com.training.sanity.tests;
 
 import java.io.File;
 
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -40,7 +41,7 @@ public class Test31_datadriven {
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
-		File src= new File("C:\\selenium Demo\\TestData.xlsx");
+		File src= new File("C:/selenium Demo/TestData.xlsx");
 	FileInputStream fis=new FileInputStream(src);
 	
 	XSSFWorkbook wb=new XSSFWorkbook(fis);

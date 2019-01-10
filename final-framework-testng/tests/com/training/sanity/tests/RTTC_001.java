@@ -57,10 +57,13 @@ public class RTTC_001 {
 		test1.sendFirstname("rina");
 		
 	    test1.sendLastname("test");
-		test1.sendEmail("rinacg2@gmail.com"); 
+		test1.sendEmail("rinacg234@gmail.com"); 
 		test1.sendTelephone("234567876"); 
 		test1.sendAddress1("ibmpune"); 
+		test1.sendAddress2("ibmpunecongo"); 
 		test1.sendcity("pune"); 
+		test1.sendpostcode("560022");
+		test1.sendcountry("India");
 		test1.sendregion("Maharashtra");
 		test1.sendpassword("welcome1");
 		test1.sendconfirmpassword("welcome1");
