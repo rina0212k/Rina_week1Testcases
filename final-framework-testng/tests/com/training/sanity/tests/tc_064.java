@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -45,7 +46,11 @@ public class tc_064 {
 	
 	
 	
-	
+	@AfterMethod
+	public void tearDown() throws Exception {
+	Thread.sleep(1000);
+	driver.quit();
+	}
 	
 	@Test(priority=1)
 	public void validtc_064Test() {
@@ -56,33 +61,36 @@ public class tc_064 {
 		test1.clickloginBtn();
 		test1.clickcatalogicon();
 		System.out.println("catalogicon clicked");
+		WebDriverWait wait=new WebDriverWait(driver, 30);
 		
 		test1.clickcategorieslink();
 		System.out.println("products is clicked");
 		
 		test1.clickaddnewicon();
 		System.out.println("addnewicon is clicked");
-	}
-	@Test(priority=2 , dataProvider = "excel-inputs",dataProviderClass = categories_DataProviders.class)
-	public void multiple_categories(String categoryname,String description,String Megatab,String Megatabdescription)throws Exception{
+	
+	/*@Test(priority=2 , dataProvider = "excel-inputs",dataProviderClass = categories_DataProviders.class)
+	public void multiple_categories(String categoryname,String description,String Megatab,String Megatabdescription)throws Exception{*/
 		
-		test1.sendcategoryname(categoryname);
+		test1.sendcategoryname("Electronics");
 		System.out.println("categoryname is entered");
-		test1.senddescription(description);
+		test1.senddescription("Electronics and digital");
 		System.out.println("desription is entered");
-		test1.sendMegatab(Megatab);
+		test1.sendMegatab("Electronics");
 		System.out.println("mega tab is entered");
-		test1.sendMegatabdescription(Megatabdescription);
+		test1.sendMegatabdescription("Electronics");
 		System.out.println("megatab description is entered");
 		test1.clicksavebutton();
 		System.out.println("save is clicked");
 		
-		//screenShot.captureScreenShot("First");
+		
+		screenShot.captureScreenShot("First");
 
 
 		}
+}
 		
-	}
+	
 		
 		
 		
