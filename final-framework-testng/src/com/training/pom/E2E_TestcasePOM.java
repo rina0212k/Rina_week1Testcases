@@ -117,7 +117,7 @@ public class E2E_TestcasePOM {
 		@FindBy(xpath= "//*[@id=\"search_button\"]")
 		private WebElement searchhomepage;
 		
-		@FindBy(xpath="//*[@id=\"Menu_Wmt3OMY3\"]/nav/ul/li[2]/a")
+		@FindBy(xpath="//*[@id=\\\"Menu_Wmt3OMY3\\\"]/nav/ul/li[2]/a")
 		private WebElement profile;
 		
 		

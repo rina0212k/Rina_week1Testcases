@@ -106,11 +106,21 @@ public class TC_065 {
 		driver.get("http://retail.hommelle.com");
 		System.out.println("homepage launched");
 		Thread.sleep(8000);
+		String ParentWindowhandle=driver.getWindowHandle();
+		System.out.println("ParentWindowhandle"+ParentWindowhandle);
+		
+		System.out.println(driver.getTitle());
+		{
+		for(String childtab:driver.getWindowHandles())
+			driver.switchTo().window(childtab);
+		}
 		test1.clickprofile();
 		 System.out.println("profile is clicked");
 		
+		test1.clicksearchbox();
+		System.out.println("search is clicked");
 		
-		
+		test1.sendsearchtbox("Diamond");
 		
 	}
 }
