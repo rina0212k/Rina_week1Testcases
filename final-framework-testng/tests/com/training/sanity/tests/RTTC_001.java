@@ -54,10 +54,10 @@ public class RTTC_001 {
 		//test1.clickaccount();
 		
 		test1.clickregister();
-		test1.sendFirstname("rina");
+		test1.sendFirstname("rina1");
 		
 	    test1.sendLastname("test");
-		test1.sendEmail("rinacg234@gmail.com"); 
+		test1.sendEmail("rinacg2134@gmail.com"); 
 		test1.sendTelephone("234567876"); 
 		test1.sendAddress1("ibmpune"); 
 		test1.sendAddress2("ibmpunecongo"); 
