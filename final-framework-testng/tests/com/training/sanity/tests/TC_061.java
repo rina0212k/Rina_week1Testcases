@@ -3,6 +3,7 @@ package com.training.sanity.tests;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.awt.AWTException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -63,7 +64,7 @@ System.out.println("register button is clicked");
 }
 
 @Test(priority=2 , dataProvider = "db-inputs",dataProviderClass = RegisterDBDataProviders.class)
-public void Registration_data(String Firstname,String Lastname,String Email,String Telephone,String Address1,String Address2,String city
+public void Registration_dataTest(String Firstname,String Lastname,String Email,String Telephone,String Address1,String Address2,String city
 ,String postcode,String country,String region , String password, String confirmpassword)throws Exception{
 
 
